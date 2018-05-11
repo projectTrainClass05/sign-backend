@@ -1,0 +1,52 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element" style="text-align: center;">
+                    <span>
+                        <img alt="image" class="img-circle" width="80px"
+                             src="./assets/img/avatar/{{loginInfo.avatar}}" />
+                    </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      <span class="clear">
+                          <span class="block m-t-xs" style="color: #222222">
+                          <strong class="font-bold">{{loginInfo.systemname}}</strong>
+                      </span>
+                      </span>
+                    </a>
+                </div>
+                <div class="logo-element">
+                    导航
+                </div>
+            </li>
+            <li [ngClass]="{active: activeRoute('role')}" style="text-align: center">
+                <a [routerLink]="['./role']"><i class="fa fa-dashboard"></i> <span class="nav-label">角色管理</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('user')}" style="text-align: center">
+              <a [routerLink]="['./user']"><i class="fa fa-desktop"></i> <span class="nav-label">用户管理</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('course')}" style="text-align: center">
+              <a [routerLink]="['./course']"><i class="fa fa-desktop"></i> <span class="nav-label">课程管理</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('sign')}" style="text-align: center">
+              <a [routerLink]="['./sign']"><i class="fa fa-desktop"></i> <span class="nav-label">签到管理</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('grade')}" style="text-align: center">
+              <a [routerLink]="['./grade']"><i class="fa fa-desktop"></i> <span class="nav-label">成绩管理</span></a>
+            </li>
+            <li style="display: none;text-align: center" [ngClass]="{active: activeRoute('spare')}">
+              <a [routerLink]="['./spare']"><i class="fa fa-desktop"></i> <span class="nav-label">备用条目</span></a>
+            </li>
+            <li style="display: none;text-align: center" [ngClass]="{active: activeRoute('spare2')}">
+              <a [routerLink]="['./spare2']"><i class="fa fa-desktop"></i> <span class="nav-label">备用条目</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('others')}" style="text-align: center">
+              <a [routerLink]="['./others']"><i class="fa fa-desktop"></i> <span class="nav-label">模板条目</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('home')}" style="text-align: center">
+              <a [routerLink]="['./home']"><i class="fa fa-dashboard"></i> <span class="nav-label">模板条目</span></a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
